@@ -1,0 +1,8 @@
+FROM pytorch/pytorch:opencv
+
+RUN apt-get install -y build-essential
+RUN apt-get install -y python3-opengl
+RUN pip install PyOpenGL PyOpenGL_accelerate 
+RUN pip install PyGLM glfw
+
+ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics

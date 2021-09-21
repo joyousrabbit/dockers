@@ -1,0 +1,7 @@
+FROM pytorch/pytorch:opencv
+
+RUN pip install panda3d==1.10.9
+RUN pip install tk Pmw
+
+ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics
+

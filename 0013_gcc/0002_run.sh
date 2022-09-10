@@ -1,9 +1,9 @@
 #!/bin/bash
 xhost +
 
-image="tensorflow/tensorflow"
-tag="1.15.5-gpu-py3-jupyter"
-name="tensorflow"
+image="gcc/gcc"
+tag="dev"
+name="dev"
 
 nvidia-docker run -it --rm\
     --ipc=host \

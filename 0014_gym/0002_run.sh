@@ -1,9 +1,9 @@
 #!/bin/bash
 xhost +
 
-image="tensorflow/tensorflow"
-tag="1.15.5-gpu-py3-jupyter"
-name="tensorflow"
+image="pytorch/pytorch"
+tag="gym"
+name="gym"
 
 nvidia-docker run -it --rm\
     --ipc=host \

@@ -1,0 +1,26 @@
+FROM pytorch/pytorch:pyqt5
+
+ENV LD_LIBRARY_PATH="/root/.mujoco/mjpro150/bin:${LD_LIBRARY_PATH}"
+
+COPY mujoco /root/.mujoco
+
+RUN apt-get update && apt-get install -y build-essential
+
+RUN apt-get install -y libosmesa6-dev libglu1-mesa-dev
+
+RUN apt-get install -y libglfw3-dev swig libglew-dev
+
+RUN pip install --upgrade cython
+
+RUN pip install lockfile
+
+RUN pip install gym[all]
+
+RUN pip install stable-baselines3[extra]
+
+RUN pip install h5py
+
+ENV LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
+
+RUN pip install mujoco mujoco-python-viewer
+

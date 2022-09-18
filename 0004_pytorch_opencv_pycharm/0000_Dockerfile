@@ -12,8 +12,7 @@ RUN apt-get update && \
 RUN apt-get install -y curl
 
 ARG PYCHARM_VERSION=2021.1
-ARG PYCHARM_BUILD=211.6693.77
-ARG pycharm_source=https://download.jetbrains.com/python/pycharm-community-${PYCHARM_BUILD}.tar.gz
+ARG pycharm_source=https://download.jetbrains.com/python/pycharm-community-${PYCHARM_VERSION}.tar.gz
 
 WORKDIR /opt/pycharm
 

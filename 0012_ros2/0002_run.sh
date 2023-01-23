@@ -2,8 +2,8 @@
 xhost +
 
 image="ros2/ros2"
-tag="galactic"
-name="galactic"
+tag="humble"
+name="humble"
 
 nvidia-docker run -it --rm\
     --ipc=host \

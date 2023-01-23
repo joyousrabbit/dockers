@@ -1,0 +1,7 @@
+FROM pytorch/pytorch:opengl
+
+RUN pip install mediapipe
+
+RUN pip install --upgrade opencv-python
+RUN pip install --upgrade opencv-contrib-python
+

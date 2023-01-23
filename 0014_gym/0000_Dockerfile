@@ -1,6 +1,6 @@
 FROM pytorch/pytorch:opengl
 
-ENV LD_LIBRARY_PATH="/root/.mujoco/mjpro150/bin:${LD_LIBRARY_PATH}"
+ENV LD_LIBRARY_PATH="/root/.mujoco/mujoco210/bin:${LD_LIBRARY_PATH}"
 
 COPY mujoco /root/.mujoco
 
@@ -23,3 +23,5 @@ RUN pip install h5py
 ENV LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
 
 RUN pip install mujoco mujoco-python-viewer
+RUN pip install -U 'mujoco-py<2.2,>=2.1'
+RUN python -c "import mujoco_py"

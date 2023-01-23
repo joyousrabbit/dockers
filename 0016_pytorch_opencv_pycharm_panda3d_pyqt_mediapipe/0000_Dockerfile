@@ -1,3 +1,0 @@
-FROM pytorch/pytorch:pyqt5
-
-RUN pip install mediapipe
